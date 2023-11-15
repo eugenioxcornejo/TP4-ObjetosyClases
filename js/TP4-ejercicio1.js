@@ -11,7 +11,7 @@ encender: function (){
 },
 
 apagar: function () {
-    document.write(`<p> Auto Apagado</p>`)
+    document.write(`<p> El auto se apago</p>`)
 },
 
 
