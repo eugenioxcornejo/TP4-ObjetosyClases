@@ -1,4 +1,8 @@
-const rectangulo{
-    largo,
-    ancho,
+class Rectangulo {
+    constructor(
+        largo,
+        ancho,
+    )
+
+    
 }
