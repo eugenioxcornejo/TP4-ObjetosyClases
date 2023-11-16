@@ -1,22 +1,23 @@
 const cuenta = {
 
     titular: 'Alex',
-    saldo: 0,
+    saldo: parseFloat(0),
 
 
     ingresar: function(deposito){
-        const saldoactualdeposito = deposito + this.saldo;
+        const saldoactualdeposito = (parseFloat(deposito) + this.saldo);
         console.log(saldoactualdeposito);
-        return saldoactualdeposito;
+        return parseFloat(saldoactualdeposito);
         },
     extraer: function(retiro){
-        const saldoactualretiro = this.saldo - retiro;
+        const saldoactualretiro = parseInt(this.saldo - parseFloat(retiro));
         console.log(saldoactualretiro);
-        return saldoactualretiro;
+        return parseFloat(saldoactualretiro);
     },
     informar: function(){
         
-        document.write(`Su saldo es ${this.saldo}`)
+
+        document.write(`${this.titular} su saldo es ${this.saldo}`);
     }    
     }
 
