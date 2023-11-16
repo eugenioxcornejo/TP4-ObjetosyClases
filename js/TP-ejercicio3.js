@@ -1,0 +1,4 @@
+const rectangulo{
+    largo,
+    ancho,
+}

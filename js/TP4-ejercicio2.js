@@ -1,33 +1,46 @@
-const cuenta = {
+class Cuenta {
+  #saldo;
+  constructor(
+    Alex, 
+    saldoparam) 
+    {
+    this.#saldo = saldoparam;
+    this.titular = Alex;
+  }
 
-    titular: 'Alex',
-    saldo: parseFloat(0),
+  get saldo() {
+    return this.#saldo;
+  }
 
-
-    ingresar: function(deposito){
-        const saldoactualdeposito = (parseFloat(deposito) + this.saldo);
-        console.log(saldoactualdeposito);
-        return parseFloat(saldoactualdeposito);
-        },
-    extraer: function(retiro){
-        const saldoactualretiro = parseInt(this.saldo - parseFloat(retiro));
-        console.log(saldoactualretiro);
-        return parseFloat(saldoactualretiro);
-    },
-    informar: function(){
-        
-
-        document.write(`${this.titular} su saldo es ${this.saldo}`);
-    }    
+  set saldo(nuevsaldo) {
+    if (nuevsaldo >= 0) {
+      this.#saldo = nuevsaldo;
+      console.log(nuevsaldo);
+    } else {
+      alert("saldo insuficiente");
     }
+  }
 
-    const montodepositado = prompt(`ingrese el monto a depositar`);
+//metodos
 
-    cuenta.ingresar(montodepositado);
-    
+ingresar(deposito){
+  console.log(this.saldo);
+  document.write(`<h2>${this.saldo}</h2>`)
+  
+ const nuevsaldo=deposito+nuevsaldo;
 
-    const montoretirado = prompt(`ingrese el monto a retirar`);
-    cuenta.extraer(montoretirado);
-    
+}
 
-    cuenta.informar();
+retirar(retiro){
+    nuevsaldo=nuevsaldo-retiro;
+    console.log(this.saldo);
+}
+
+informar(){
+  document.write(`su saldo es ${this.#saldo}` )
+}
+}
+
+Cuenta.ingresar(8);
+Cuenta.retirar(8);
+
