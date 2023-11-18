@@ -1,16 +1,18 @@
 class Rectangulo {
     constructor(
-        largo,
-        ancho,
+        largoparam,
+        anchoparam,
     )
+    {
 
     this.largo = largoparam;
     this.ancho = anchoparam;
-
-    cambiarlargo(largoparam){
+    }
+    cambiarlargo(){
+        console.log(`${this.largo}`)
         document.write(`<h2>El Largo es ${this.largo}</h2>`);
     }
-    cambiarancho(anchoparam){
+    cambiarancho(){
         document.write(`<h2>EL ancho es</h2>`);
     }
 
@@ -21,8 +23,12 @@ class Rectangulo {
     }
 
     area (){
-        area= this.largo*this.ancho;
-        document.write(`<h2>El area es ${area}</h2>`);
+        arearect= (this.largo)*(this.ancho);
+        document.write(`<h2>El area es ${arearect} </h2>`);
         
     }
 }
+const figurarectangulo = new Rectangulo(5,3);
+console.log(figurarectangulo);
+document.write(`${figurarectangulo.area}`)
+
