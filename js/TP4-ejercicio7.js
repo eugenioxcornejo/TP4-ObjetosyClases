@@ -45,12 +45,57 @@ let i=0
     this.#nombre.push(nombre);
 
     this.telefono.push(telefono);
-    document.write(`<p/>Nombre${i}: ${this.nombre[i]}</p>`);
-    document.write(`<p>Telefono${i}: ${this.telefono[i]}</p>`);
+    
     }
     while(confirm('desea anadir otro contacto?'), (i<10))
     break;
     
+
+    case '2':2
+
+    let existecontacto= prompt('ingrese el nombre a consultar');
+     
+         
+            if( existecontacto === this.#nombre[1]){
+                document.write(`el contacto existe`)
+                
+            } 
+            else if(existecontacto === this.#nombre[2]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[3]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[4]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[5]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[6]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[7]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[8]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[9]){
+                document.write(`el contacto existe`)
+            }
+            else if(existecontacto === this.#nombre[10]){
+                document.write(`el contacto existe`)
+            } else(document.write('el contacto no existe'));
+        break;
+                       
+    case '3' :3
+     for(let i=1; i<11; i++ ){
+        document.write(`<p/>Nombre${i}: ${this.nombre[i]}</p>`);
+    document.write(`<p>Telefono${i}: ${this.telefono[i]}</p>`);
+
+     }
+     break;
     
 
 }
