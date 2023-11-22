@@ -2,8 +2,8 @@ class agenda {
     #nombre;
     
     constructor(
-        nombresparam = [],
-        telefonosparam = [],
+        nombresparam = ['nombresbase'],
+        telefonosparam = ['3815662665'],
     )
 {
     this.#nombre = nombresparam;
@@ -15,7 +15,7 @@ get nombre () {
     return this.#nombre;
 }
 set nombre (nuevoNombre) {
-    if (nuevoNombre.length <=10) {
+    if (nuevoNombre.length <=11) {
         this.#nombre = nuevoNombre;
         } else{
             alert('la agenda esta ompleta');
@@ -29,28 +29,36 @@ console.log(opcion.toLocaleLowerCase());
 
 
 switch(opcion){
-case '1' :
-    
+case '1' :1
+
+
+let i=0
     do {
-        let i=1;
-    i=i+1;
-    const nombre = prompt(`ingrese el nombre del contacto`);
+        i=i+1;
+
+    
+    
+    console.log(`i= ${i}`);
+    const nombre = prompt('ingrese el nombre del contacto');
+    console.log(nombre);
     const telefono = prompt(`ingrese el telefono del contacto`);
     this.#nombre.push(nombre);
+
     this.telefono.push(telefono);
-    document.write(`<p/>Nombre: ${this.nombre[i]}</p>`);
-    document.write(`<p>Telefono: ${this.telefono[i]}</p>`);
+    document.write(`<p/>Nombre${i}: ${this.nombre[i]}</p>`);
+    document.write(`<p>Telefono${i}: ${this.telefono[i]}</p>`);
     }
-    while(confirm('desea anadir otro contacto?'))
+    while(confirm('desea anadir otro contacto?'), (i<10))
     break;
     
     
+
 }
-}
-while (confirm('desea seleccionar otra opcion?'));
 
 
-}}
+
+}  while (confirm('desea seleccionar otra opcion?')); 
+ }}
 
 
  
